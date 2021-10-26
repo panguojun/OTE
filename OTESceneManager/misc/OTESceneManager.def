@@ -1,0 +1,8 @@
+LIBRARY OTESceneManager
+EXPORTS	
+	dllStartPlugin
+	dllStopPlugin
+	
+	Algorithm_Start
+	Algorithm_Selection
+	Algorithm_WorkFun
