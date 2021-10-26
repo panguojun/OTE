@@ -1,0 +1,747 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Plugin_ActorEditor.dll"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "Plugin_ActorEditor.dll"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ActorEditorMain DIALOGEX 0, 0, 170, 406
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "角色编辑器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "移动",IDC_BUTTON3,85,6,18,16,BS_BITMAP
+    PUSHBUTTON      "旋转",IDC_BUTTON4,103,6,17,16,BS_BITMAP
+    PUSHBUTTON      "缩放",IDC_BUTTON5,120,6,17,16,BS_BITMAP
+    PUSHBUTTON      "退出",IDC_BUTTON10,145,6,17,16,BS_BITMAP
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,6,25,157,378
+    PUSHBUTTON      "保存",IDC_Save,24,6,17,16,BS_BITMAP
+    PUSHBUTTON      "移动",IDC_BUTTON9,67,6,18,16,BS_BITMAP
+    PUSHBUTTON      "打开",IDC_Open,6,6,17,16,BS_BITMAP
+    PUSHBUTTON      "关闭",IDC_Close,41,6,17,16,BS_BITMAP
+END
+
+IDD_MeshEdit DIALOGEX 0, 0, 156, 360
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_MeshList,2,10,150,252,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Mesh列表:",IDC_STATIC,2,0,36,8
+    PUSHBUTTON      "隐藏",IDC_Hide,2,295,74,14,WS_DISABLED
+    PUSHBUTTON      "显示",IDC_Show,78,295,74,14,WS_DISABLED
+    PUSHBUTTON      "导出",IDC_Export,2,311,74,14,WS_DISABLED
+    PUSHBUTTON      "导入",IDC_Import,78,311,74,14,WS_DISABLED
+    PUSHBUTTON      "替换",IDC_Replace,2,327,74,14,WS_DISABLED
+    PUSHBUTTON      "删除",IDC_Delete,78,327,74,14,WS_DISABLED
+    PUSHBUTTON      "保存修改",IDC_Save,2,343,150,14,WS_DISABLED
+    EDITTEXT        IDC_Name,2,265,74,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "更改名称",IDC_ReName,78,265,74,14,WS_DISABLED
+    EDITTEXT        IDC_Material,2,280,74,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "更改材质",IDC_SetMaterial,78,280,74,14,WS_DISABLED
+END
+
+IDD_AnimationEdit DIALOGEX 0, 0, 156, 360
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "动画列表:",IDC_STATIC,2,0,36,8
+    LISTBOX         IDC_AnimationList,2,9,150,294,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "播放",IDC_Play,2,307,73,14,WS_DISABLED
+    PUSHBUTTON      "停止",IDC_Stop,79,307,73,14,WS_DISABLED
+    PUSHBUTTON      "添加",IDC_Add,2,323,73,14,WS_DISABLED
+    PUSHBUTTON      "删除",IDC_Del,79,323,73,14,WS_DISABLED
+END
+
+IDD_HookEdit DIALOGEX 0, 0, 156, 360
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "挂点列表:",IDC_STATIC,2,0,36,8
+    LISTBOX         IDC_PotHookList,2,27,150,151,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "添加",IDC_Add,2,323,73,14,WS_DISABLED
+    PUSHBUTTON      "删除",IDC_Del,79,323,73,14,WS_DISABLED
+    GROUPBOX        "挂点信息",IDC_STATIC,2,190,150,126
+    LTEXT           "挂点名称：",IDC_STATIC,9,203,41,8
+    EDITTEXT        IDC_Name,49,200,96,14,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "位置信息：",IDC_STATIC,9,220,41,8
+    CTEXT           "X:\tY:\tZ:",IDC_Postion,9,231,135,11,WS_BORDER
+    LTEXT           "旋转信息：",IDC_STATIC,9,256,41,8
+    CTEXT           "X:\tY:\tZ:\tW:",IDC_Rotation,9,267,135,11,WS_BORDER
+    LTEXT           "缩放信息：",IDC_STATIC,9,290,41,8
+    CTEXT           "X:\tY:\tZ:",IDC_Scale,9,301,135,11,WS_BORDER
+    PUSHBUTTON      "重置",IDC_Reset,83,9,64,14,WS_DISABLED
+    PUSHBUTTON      "保存",IDC_Save,7,10,64,14,WS_DISABLED
+    PUSHBUTTON      "加载测试物体",IDC_LoadTest,2,340,73,14,WS_DISABLED
+    PUSHBUTTON      "删除测试物体",IDC_DelTest,80,340,72,14,WS_DISABLED
+    CONTROL         "显示骨胳",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,108,179,46,11
+END
+
+IDD_Bone DIALOGEX 0, 0, 119, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+CAPTION "选择绑定骨骼"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,7,217,50,14,WS_DISABLED
+    PUSHBUTTON      "取消",IDCANCEL,62,217,50,14
+    LISTBOX         IDC_BoneList,7,7,105,192,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "人物身上点选",IDC_BUTTON1,7,202,105,13
+END
+
+IDD_ActionEdit DIALOGEX 0, 0, 156, 353
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ActName,79,2,50,14,ES_AUTOHSCROLL | WS_DISABLED
+    LISTBOX         IDC_ActList,2,18,153,120,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "骨胳动画:",IDC_STATIC,3,173,36,8
+    PUSHBUTTON      "创建效果",IDC_AddMagic,2,323,60,17,WS_DISABLED
+    PUSHBUTTON      "创建轨迹",IDC_CreateTrack,66,323,50,18,WS_DISABLED
+    PUSHBUTTON      "现成轨迹",IDC_UseTrack,65,341,50,11,WS_DISABLED
+    PUSHBUTTON      "播放>",IDC_Play,2,140,33,29,WS_DISABLED
+    PUSHBUTTON      "停止",IDC_Stop,37,140,19,14,BS_FLAT | WS_DISABLED
+    PUSHBUTTON      "+",IDC_Add,130,3,13,11,BS_FLAT | WS_DISABLED
+    PUSHBUTTON      "打开",IDC_Import,60,1,18,14,BS_FLAT | WS_DISABLED
+    PUSHBUTTON      "另存",IDC_Export,43,1,17,14,BS_FLAT | WS_DISABLED
+    CONTROL         "",IDC_MagicList,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,2,210,153,112
+    LTEXT           "行动长度:",IDC_STATIC,82,199,36,8
+    EDITTEXT        IDC_Time,120,197,34,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "行动速度:",IDC_STATIC,2,199,36,8
+    EDITTEXT        IDC_MagSpeed,40,197,34,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "速度:",IDC_STATIC,100,174,20,8
+    EDITTEXT        IDC_AniSpeed,120,173,33,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "循环",IDC_ISLOOP,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,2,186,29,10
+    PUSHBUTTON      "添加声音",IDC_AddSound,2,340,59,12,WS_DISABLED
+    PUSHBUTTON      "保存",IDC_Save,2,0,40,16,BS_FLAT | WS_DISABLED
+    COMBOBOX        IDC_BONEANIMCOMBO,40,171,54,149,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "c",IDC_ChangeActionNanme,144,3,11,11,BS_FLAT | 
+                    WS_DISABLED
+    PUSHBUTTON      "绑定反应器",IDC_BUTTON1,117,327,37,21,WS_DISABLED
+    CONTROL         "显示骨胳",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,108,160,46,11
+END
+
+IDD_TrackDlg DIALOGEX 0, 0, 117, 222
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST | WS_EX_TOOLWINDOW
+CAPTION "轨道管理器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,7,201,50,14
+    PUSHBUTTON      "取消",IDCANCEL,60,201,50,14
+    LISTBOX         IDC_TrackList,7,7,103,175,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "删除",IDC_BUTTON1,7,183,32,13
+    PUSHBUTTON      "清理",IDC_BUTTON2,41,183,69,13
+END
+
+IDD_KEYFRAMEDLG_DIALOG DIALOGEX 200, 320, 440, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "关键桢编辑"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "<",IDC_BUTTON1,0,1,20,13
+    PUSHBUTTON      ">",IDC_BUTTON3,19,1,20,13
+    EDITTEXT        IDC_EDIT1,0,54,32,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "删除",IDC_Erase,98,52,23,14,BS_CENTER | BS_VCENTER | 
+                    BS_FLAT
+    PUSHBUTTON      "绑定骨骼",IDC_BindBone,377,52,36,14,BS_CENTER | 
+                    BS_VCENTER | BS_FLAT
+    PUSHBUTTON      "保存",IDC_Save,413,52,26,14,BS_CENTER | BS_VCENTER | 
+                    BS_FLAT
+    PUSHBUTTON      "轨迹生成",IDC_BUTTON2,125,52,37,14,BS_FLAT
+    PUSHBUTTON      "整体编辑",IDC_BUTTON4,162,52,37,14,BS_FLAT
+    DEFPUSHBUTTON   "添加关键桢",IDC_BUTTON5,39,49,57,17
+    CONTROL         "曲线插值",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,327,56,46,10
+    PUSHBUTTON      "闭合轨道",IDC_BUTTON6,200,52,37,14,BS_FLAT
+    EDITTEXT        IDC_EDIT2,284,54,33,12,ES_AUTOHSCROLL
+    LTEXT           "长度:",IDC_STATIC,257,55,20,11
+END
+
+IDD_CUSTOMCREATE DIALOGEX 0, 0, 258, 244
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "自定义创建"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "圆锥曲线系列",IDC_STATIC,1,2,123,144
+    LTEXT           "r = e*p/(1-e*cos(a)) + r0 (0<e<1为偏心率,p>0为焦参数)         ",
+                    IDC_STATIC,7,15,105,21
+    EDITTEXT        IDC_EDIT1,55,38,52,12,ES_AUTOHSCROLL
+    LTEXT           "离心率 e:",IDC_STATIC,7,39,38,11
+    EDITTEXT        IDC_EDIT2,55,55,52,12,ES_AUTOHSCROLL
+    LTEXT           "焦参数 p:",IDC_STATIC,7,55,37,11
+    PUSHBUTTON      "生成",IDC_BUTTON1,9,129,109,16
+    LTEXT           "X",IDC_STATIC,3,173,13,11
+    EDITTEXT        IDC_EDIT3,14,173,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,41,173,13,11
+    EDITTEXT        IDC_EDIT4,53,173,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,81,173,13,11
+    EDITTEXT        IDC_EDIT5,93,173,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "中心点偏移",IDC_STATIC,1,164,116,33
+    EDITTEXT        IDC_EDIT6,55,95,50,13,ES_AUTOHSCROLL
+    LTEXT           "赤道夹角：",IDC_STATIC,11,97,43,11
+    EDITTEXT        IDC_EDIT7,55,73,52,12,ES_AUTOHSCROLL
+    LTEXT           "焦距常量 r0:",IDC_STATIC,7,73,46,11
+    GROUPBOX        "整体属性",IDC_STATIC,0,156,256,84
+    LTEXT           "X",IDC_STATIC,131,175,13,11
+    EDITTEXT        IDC_EDIT8,143,174,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,169,174,13,11
+    EDITTEXT        IDC_EDIT9,181,174,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,209,174,13,11
+    EDITTEXT        IDC_EDIT10,221,174,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "整体缩放",IDC_STATIC,129,164,116,33
+    LTEXT           "X",IDC_STATIC,3,211,13,11
+    EDITTEXT        IDC_EDIT11,15,210,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,41,210,13,11
+    EDITTEXT        IDC_EDIT12,53,210,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,81,210,13,11
+    EDITTEXT        IDC_EDIT13,93,210,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "整体旋转",IDC_STATIC,1,200,116,33
+    GROUPBOX        "螺线系列",IDC_STATIC,125,2,129,146
+    PUSHBUTTON      "生成",IDC_BUTTON2,131,131,120,15
+    EDITTEXT        IDC_EDIT14,55,113,50,13,ES_AUTOHSCROLL
+    LTEXT           "间隔夹角：",IDC_STATIC,11,115,43,11
+END
+
+IDD_FRM_PP DIALOGEX 0, 200, 145, 278
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "桢属性"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,0,0,145,278
+END
+
+IDD_DLG_LVE DIALOGEX 0, 0, 200, 41
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_BORDER
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,164,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,174,7,19,15
+END
+
+IDD_TRACKCTRLDLG DIALOGEX 0, 0, 125, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "轨道整体控制面板"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "X",IDC_STATIC,7,21,13,11
+    EDITTEXT        IDC_EDIT1,19,20,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,45,20,13,11
+    EDITTEXT        IDC_EDIT2,57,20,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,85,20,13,11
+    EDITTEXT        IDC_EDIT3,97,20,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "中心点偏移",IDC_STATIC,4,11,116,32
+    GROUPBOX        "整体属性 调整值!",IDC_STATIC,0,2,120,137
+    LTEXT           "X",IDC_STATIC,7,57,13,11
+    EDITTEXT        IDC_EDIT4,18,55,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,45,55,13,11
+    EDITTEXT        IDC_EDIT5,57,55,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,85,55,13,11
+    EDITTEXT        IDC_EDIT6,97,55,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "整体缩放",IDC_STATIC,4,44,116,33
+    LTEXT           "X",IDC_STATIC,7,94,13,11
+    EDITTEXT        IDC_EDIT7,18,93,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,45,93,13,11
+    EDITTEXT        IDC_EDIT8,57,93,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,85,93,13,11
+    EDITTEXT        IDC_EDIT9,97,93,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "整体旋转",IDC_STATIC,4,82,116,33
+    PUSHBUTTON      "关闭",IDC_BUTTON1,5,239,113,14,BS_FLAT
+    PUSHBUTTON      "应用",IDC_BUTTON2,5,120,113,15,BS_FLAT
+    PUSHBUTTON      "方向适应轨道（直线插值）",IDC_BUTTON3,4,146,81,14,
+                    BS_FLAT
+    PUSHBUTTON      "赤道旋转",IDC_BUTTON6,80,186,39,14,BS_FLAT
+    EDITTEXT        IDC_EDIT10,5,187,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,29,187,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,53,187,23,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "圆滑位置轨道",IDC_BUTTON4,5,215,113,15,BS_FLAT
+    PUSHBUTTON      "方向适应轨道(曲线)",IDC_BUTTON5,3,165,81,14,BS_FLAT
+    CONTROL         "反向",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    90,148,30,11
+    CONTROL         "反向",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    90,166,30,11
+END
+
+IDD_ADDENT DIALOGEX 0, 0, 424, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "绑定对象"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "模型实体",IDC_BUTTON1,143,38,66,16
+    PUSHBUTTON      "粒子系统",IDC_BUTTON2,142,59,67,16
+    PUSHBUTTON      "角色自身",IDC_BUTTON4,143,12,66,21
+    COMBOBOX        IDC_COMBO1,8,13,130,92,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,8,31,130,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "添加",IDC_BUTTON6,358,127,63,18
+    GROUPBOX        "特效对象",IDC_STATIC,1,0,211,116
+    GROUPBOX        "常绑定反应器",IDC_STATIC,221,3,200,112
+    COMBOBOX        IDC_COMBO2,222,15,130,92,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST3,222,30,130,81,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,51,128,85,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,269,127,82,16,ES_AUTOHSCROLL
+    LTEXT           "对象：",IDC_STATIC,7,129,35,12
+    LTEXT           "反应器：",IDC_STATIC,221,129,35,12
+    PUSHBUTTON      "发射器",IDC_BUTTON3,357,16,58,17
+END
+
+IDD_COLORDLG DIALOGEX 0, 0, 168, 124
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "颜色对话框"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "静态",IDC_COLOR_STATIC,0,1,125,99,SS_NOTIFY | WS_BORDER
+    LTEXT           "红",IDC_RED_STATIC,1,108,9,8
+    LTEXT           "绿",IDC_GREEN_STATIC,43,108,9,8
+    LTEXT           "蓝",IDC_BLUE_STATIC,86,108,9,8
+    EDITTEXT        IDC_RED_EDIT,10,106,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GREEN_EDIT,53,106,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BLUE_EDIT,96,106,29,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDC_BUTTON1,127,2,37,14
+    PUSHBUTTON      "取消",IDC_BUTTON2,127,20,38,13
+    PUSHBUTTON      "全部指定",IDC_BUTTON3,128,83,38,14
+END
+
+IDD_SLIDER_EDITOR DIALOGEX 0, 0, 94, 14
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_NOTICKS | WS_TABSTOP,0,0,65,12
+    EDITTEXT        IDC_EDIT1,63,0,22,12,ES_AUTOHSCROLL | ES_WANTRETURN
+END
+
+IDD_SOUND_DLG DIALOGEX 0, 0, 121, 227
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "声音"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,2,12,118,186,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "关闭",IDC_BUTTON2,1,211,57,15
+    PUSHBUTTON      "设定",IDC_BUTTON3,61,211,58,15
+    LTEXT           "声音列表：",IDC_STATIC,3,2,44,9
+    CONTROL         "是否循环",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,201,54,9
+END
+
+IDD_FRAMEANIM_DLG DIALOGEX 0, 0, 394, 255
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "祯动画编辑器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_FRAMEANI_PIC,"Static",SS_BLACKFRAME,103,1,289,253
+    PUSHBUTTON      "添加贴图",IDC_BUTTON4,50,1,51,14,BS_FLAT
+    GROUPBOX        "群操作",IDC_STATIC,0,161,102,93
+    EDITTEXT        IDC_EDIT2,39,174,56,12,ES_AUTOHSCROLL
+    LTEXT           "祯间隔",IDC_STATIC,5,174,31,13
+    PUSHBUTTON      "全部指定",IDC_BUTTON5,40,195,54,12
+    LISTBOX         IDC_LIST2,1,16,101,126,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "祯指定",IDC_BUTTON3,0,143,101,16
+    PUSHBUTTON      "删除",IDC_BUTTON1,1,1,48,14,BS_FLAT
+END
+
+IDD_ACTIONLISTDLG DIALOGEX 0, 0, 113, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "行动列表"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_ActList,0,0,113,191,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_BUTTON1,3,192,52,16
+    PUSHBUTTON      "取消",IDC_BUTTON2,58,192,52,16
+END
+
+IDD_ACTIONDLG DIALOGEX 0, 0, 125, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "轨道整体控制面板"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "X",IDC_STATIC,7,21,13,11
+    EDITTEXT        IDC_EDIT1,19,20,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,45,20,13,11
+    EDITTEXT        IDC_EDIT2,57,20,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,85,20,13,11
+    EDITTEXT        IDC_EDIT3,97,20,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "中心点偏移",IDC_STATIC,4,11,116,32
+    GROUPBOX        "整体属性 调整值!",IDC_STATIC,0,2,120,137
+    LTEXT           "X",IDC_STATIC,7,57,13,11
+    EDITTEXT        IDC_EDIT4,18,55,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,45,55,13,11
+    EDITTEXT        IDC_EDIT5,57,55,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,85,55,13,11
+    EDITTEXT        IDC_EDIT6,97,55,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "整体缩放",IDC_STATIC,4,44,116,33
+    LTEXT           "X",IDC_STATIC,7,94,13,11
+    EDITTEXT        IDC_EDIT7,18,93,23,12,ES_AUTOHSCROLL
+    LTEXT           "Y",IDC_STATIC,45,93,13,11
+    EDITTEXT        IDC_EDIT8,57,93,23,12,ES_AUTOHSCROLL
+    LTEXT           "Z",IDC_STATIC,85,93,13,11
+    EDITTEXT        IDC_EDIT9,97,93,22,12,ES_AUTOHSCROLL
+    GROUPBOX        "整体旋转",IDC_STATIC,4,82,116,33
+    PUSHBUTTON      "关闭",IDC_BUTTON1,5,239,113,14,BS_FLAT
+    PUSHBUTTON      "应用",IDC_BUTTON2,5,120,113,15,BS_FLAT
+    PUSHBUTTON      "方向适应轨道（直线插值）",IDC_BUTTON3,4,146,81,14,
+                    BS_FLAT
+    PUSHBUTTON      "赤道旋转",IDC_BUTTON6,80,186,39,14,BS_FLAT
+    EDITTEXT        IDC_EDIT10,5,187,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT11,29,187,23,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT12,53,187,23,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "圆滑位置轨道",IDC_BUTTON4,5,215,113,15,BS_FLAT
+    PUSHBUTTON      "方向适应轨道(曲线)",IDC_BUTTON5,3,165,81,14,BS_FLAT
+    CONTROL         "反向",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    90,148,30,11
+    CONTROL         "反向",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    90,166,30,11
+END
+
+IDD_REACTORLIBDLG DIALOGEX 0, 0, 136, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "反应器库"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO2,0,4,136,92,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST3,0,20,136,119,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "添加",IDC_BUTTON1,75,182,61,15
+    PUSHBUTTON      "发射器",IDC_BUTTON2,1,141,134,16
+    EDITTEXT        IDC_EDIT1,3,183,72,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ActorEditorMain, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 163
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 403
+    END
+
+    IDD_MeshEdit, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 152
+        BOTTOMMARGIN, 359
+    END
+
+    IDD_AnimationEdit, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 152
+        BOTTOMMARGIN, 356
+    END
+
+    IDD_HookEdit, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 152
+        BOTTOMMARGIN, 357
+    END
+
+    IDD_Bone, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 112
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_ActionEdit, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 155
+        BOTTOMMARGIN, 352
+    END
+
+    IDD_TrackDlg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_KEYFRAMEDLG_DIALOG, DIALOG
+    BEGIN
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_CUSTOMCREATE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_FRM_PP, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 262
+    END
+
+    IDD_DLG_LVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 33
+    END
+
+    IDD_TRACKCTRLDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 120
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_ADDENT, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_COLORDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 127
+    END
+
+    IDD_SLIDER_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 89
+        BOTTOMMARGIN, 12
+    END
+
+    IDD_SOUND_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 120
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_FRAMEANIM_DLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 392
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 254
+    END
+
+    IDD_ACTIONDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 120
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_REACTORLIBDLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 197
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP7             BITMAP                  "bitmap7.bmp"
+IDB_BITMAP6             BITMAP                  "bitmap6.bmp"
+IDB_BITMAP5             BITMAP                  "bitmap5.bmp"
+IDB_BITMAP4             BITMAP                  "bitmap4.bmp"
+IDB_BITMAP3             BITMAP                  "bitmap3.bmp"
+IDB_BITMAP1             BITMAP                  "bitmap1.bmp"
+IDB_BITMAP8             BITMAP                  "bitmap8.bmp"
+IDB_BITMAP2             BITMAP                  "bitmap2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "编辑",                        ID_Menu32786
+        MENUITEM "复制",                        ID__32793
+        MENUITEM SEPARATOR
+        MENUITEM "删除",                        ID__32795
+    END
+END
+
+IDR_MENU2 MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "导入行动内容",                ID__32801
+        MENUITEM SEPARATOR
+        MENUITEM "删除",                        ID__32798
+    END
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
