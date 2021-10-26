@@ -1,0 +1,345 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Plugin_MeshEditor.dll"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "Plugin_MeshEditor.dll"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EntEditMain DIALOGEX 0, 0, 142, 338
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "场景实体编辑器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "保存",IDC_BUTTON3,39,2,19,17,BS_BITMAP | BS_FLAT
+    PUSHBUTTON      "打开",IDC_BUTTON2,20,2,19,17,BS_BITMAP | BS_FLAT
+    PUSHBUTTON      "p",IDC_BUTTON1,1,2,20,17,BS_BITMAP | BS_FLAT
+    CONTROL         "",IDC_TAB2,"SysTabControl32",0x0,0,28,142,309
+    PUSHBUTTON      "保存",IDC_BUTTON4,82,2,19,17,BS_BITMAP
+    PUSHBUTTON      "保存",IDC_BUTTON5,102,2,19,17,BS_BITMAP
+    PUSHBUTTON      "保存",IDC_BUTTON6,122,2,19,17,BS_BITMAP
+    PUSHBUTTON      "保存",IDC_BUTTON7,62,2,19,17,BS_BITMAP | BS_FLAT
+END
+
+IDD_DLG_LVE DIALOGEX 0, 0, 199, 41
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,7,7,164,27,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,173,7,19,27
+END
+
+IDD_EDIT_DLG DIALOGEX 0, 0, 137, 270
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_WINDOWEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,0,21,137,233
+    PUSHBUTTON      "从场景中移除",IDC_BUTTON1,0,255,65,14,BS_FLAT
+    PUSHBUTTON      "更新",IDC_BUTTON2,70,255,66,14,BS_FLAT
+    PUSHBUTTON      "搜",IDC_BUTTON3,57,4,17,13
+    EDITTEXT        IDC_SEARCH,5,4,43,13,ES_AUTOHSCROLL
+END
+
+IDD_CRT_DLG DIALOGEX 0, 0, 137, 285
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,0,18,137,229
+    LTEXT           "类型：",IDC_STATIC,3,5,30,11
+    COMBOBOX        IDC_COMBO1,35,3,66,80,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "使用随机大小",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,71,252,64,10
+    CONTROL         "使用随机朝向",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,2,252,64,10
+END
+
+IDD_PP_DLG DIALOGEX 0, 0, 140, 279
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,2,4,136,118
+    LTEXT           "默认行动:",IDC_STATIC,2,129,36,8
+    LISTBOX         IDC_ActList,2,144,136,113,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "除清行动",IDC_BUTTON1,2,258,136,14
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 165, 75
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "类型"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO1,10,19,99,84,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDC_BUTTON1,53,52,53,15
+    PUSHBUTTON      "取消",IDC_BUTTON2,109,53,53,14
+END
+
+IDD_NPC_CRT_DLG DIALOGEX 0, 0, 179, 98
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "npc创建"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "关闭",IDOK,0,82,179,16
+    EDITTEXT        IDC_EDIT1,39,18,124,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "ID: ",IDC_STATIC,21,19,13,13
+    EDITTEXT        IDC_EDIT2,39,37,124,12,ES_AUTOHSCROLL
+    LTEXT           "名字: ",IDC_STATIC,13,39,19,13
+    PUSHBUTTON      "创建到笔刷",IDC_BUTTON1,125,65,50,15
+END
+
+IDD_CREATELIGHT DIALOGEX 0, 0, 123, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "创建光源　"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "创建到笔刷",IDC_BUTTON1,71,118,47,16
+    GROUPBOX        "点光源",IDC_STATIC,1,0,119,155
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,17,37,86,12
+    LTEXT           "内径: ",IDC_STATIC,0,38,20,11
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,17,58,86,12
+    LTEXT           "外径:",IDC_STATIC,0,58,20,11
+    EDITTEXT        IDC_EDIT1,100,38,19,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,100,58,20,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "颜色",IDC_BUTTON3,89,79,31,14
+    PUSHBUTTON      "顶点色",IDC_BUTTON2,1,118,30,16
+    CONTROL         "计算阴影",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,42,81,44,11
+    CONTROL         "计算物体",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,98,47,13
+    CONTROL         "计算地面",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,72,98,45,13
+    PUSHBUTTON      "保存顶点色",IDC_BUTTON4,2,138,54,17
+    COMBOBOX        IDC_COMBO1,6,14,114,80,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "光照图",IDC_BUTTON5,33,119,36,15
+    PUSHBUTTON      "保存光照图",IDC_BUTTON6,62,138,58,17
+    PUSHBUTTON      "重置",IDC_BUTTON14,5,77,22,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_EntEditMain, DIALOG
+    BEGIN
+        RIGHTMARGIN, 136
+    END
+
+    IDD_DLG_LVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+
+    IDD_CRT_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_PP_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 138
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 271
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_CREATELIGHT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 120
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "bitmap1.bmp"
+IDB_BITMAP2             BITMAP                  "bitmap2.bmp"
+IDB_BITMAP3             BITMAP                  "bitmap3.bmp"
+IDB_BITMAP4             BITMAP                  "bitmap4.bmp"
+IDB_BITMAP5             BITMAP                  "bitmap5.bmp"
+IDB_BITMAP6             BITMAP                  "bitmap6.bmp"
+IDB_BITMAP7             BITMAP                  "bitmap7.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG2 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7541, 0x6f74, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x7349, 0x704e, 0x0063, 
+    IDC_COMBO1, 0x403, 8, 0
+0x7349, 0x694c, 0x6867, 0x0074, 
+    IDC_COMBO1, 0x403, 4, 0
+0x6143, 0x006d, 
+    0
+END
+
+IDD_CRT_DLG DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 5, 0
+0x7541, 0x6f74, "\000" 
+    IDC_COMBO1, 0x403, 6, 0
+0x7349, 0x704e, 0x0063, 
+    IDC_COMBO1, 0x403, 8, 0
+0x7349, 0x694c, 0x6867, 0x0074, 
+    IDC_COMBO1, 0x403, 4, 0
+0x6143, 0x006d, 
+    0
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
