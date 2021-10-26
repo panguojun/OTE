@@ -1,0 +1,94 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppFrame", "AppFrame.vcproj", "{786AF99E-7642-4353-A88D-01DEC68C9923}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OTEQTSceneManager", "..\OTE\OTESceneManager\scripts\OTESceneManager.vcproj", "{5F93E5B9-8097-4468-A743-D047546FAF91}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_CommonEditor", "..\OTE\OTEEditors\Plugin_CommonEditor\Plugin_CommonEditor.vcproj", "{FD62D8FD-A99F-499F-B64F-32EF10B269FA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_LogicEditor", "..\OTE\OTEEditors\Plugin_LogicEditor\Plugin_LogicEditor.vcproj", "{19FD3435-3932-4F25-8BAF-E6703193FFC2}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_ZHFileConvertor", "..\OTE\OTEEditors\Plugin_ZHFileConvertor\Plugin_ZHFileConvertor.vcproj", "{FD62D8FD-A99F-499F-B64F-32EF10B269FB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_TerrainEditor", "..\OTE\OTEEditors\Plugin_TerrainEditor\Plugin_TerrainEditor.vcproj", "{0C8C64A1-200D-4E0B-B611-AF1AC17C647F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_EntityEditor", "..\OTE\OTEEditors\Plugin_EntityEditor\Plugin_EntityEditor.vcproj", "{4D400E0B-1204-48EF-96DB-A0BDD62F2C8B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_ActorEditor", "..\OTE\OTEEditors\Plugin_ActorEditor\Plugin_ActorEditor.vcproj", "{EF1D498E-9FF0-4104-AEB2-8949329CF1FA}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		XYTEST = XYTEST
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{786AF99E-7642-4353-A88D-01DEC68C9923}.Debug.ActiveCfg = Debug|Win32
+		{786AF99E-7642-4353-A88D-01DEC68C9923}.Debug.Build.0 = Debug|Win32
+		{786AF99E-7642-4353-A88D-01DEC68C9923}.Release.ActiveCfg = Release|Win32
+		{786AF99E-7642-4353-A88D-01DEC68C9923}.Release.Build.0 = Release|Win32
+		{786AF99E-7642-4353-A88D-01DEC68C9923}.XYTEST.ActiveCfg = Release|Win32
+		{786AF99E-7642-4353-A88D-01DEC68C9923}.XYTEST.Build.0 = Release|Win32
+		{5F93E5B9-8097-4468-A743-D047546FAF91}.Debug.ActiveCfg = Debug|Win32
+		{5F93E5B9-8097-4468-A743-D047546FAF91}.Debug.Build.0 = Debug|Win32
+		{5F93E5B9-8097-4468-A743-D047546FAF91}.Release.ActiveCfg = Release|Win32
+		{5F93E5B9-8097-4468-A743-D047546FAF91}.Release.Build.0 = Release|Win32
+		{5F93E5B9-8097-4468-A743-D047546FAF91}.XYTEST.ActiveCfg = Debug|Win32
+		{5F93E5B9-8097-4468-A743-D047546FAF91}.XYTEST.Build.0 = Debug|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FA}.Debug.ActiveCfg = Debug|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FA}.Debug.Build.0 = Debug|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FA}.Release.ActiveCfg = Release|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FA}.Release.Build.0 = Release|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FA}.XYTEST.ActiveCfg = Release|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FA}.XYTEST.Build.0 = Release|Win32
+		{19FD3435-3932-4F25-8BAF-E6703193FFC2}.Debug.ActiveCfg = Debug|Win32
+		{19FD3435-3932-4F25-8BAF-E6703193FFC2}.Debug.Build.0 = Debug|Win32
+		{19FD3435-3932-4F25-8BAF-E6703193FFC2}.Release.ActiveCfg = Release|Win32
+		{19FD3435-3932-4F25-8BAF-E6703193FFC2}.Release.Build.0 = Release|Win32
+		{19FD3435-3932-4F25-8BAF-E6703193FFC2}.XYTEST.ActiveCfg = Release|Win32
+		{19FD3435-3932-4F25-8BAF-E6703193FFC2}.XYTEST.Build.0 = Release|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FB}.Debug.ActiveCfg = Debug|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FB}.Debug.Build.0 = Debug|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FB}.Release.ActiveCfg = Release|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FB}.Release.Build.0 = Release|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FB}.XYTEST.ActiveCfg = Release|Win32
+		{FD62D8FD-A99F-499F-B64F-32EF10B269FB}.XYTEST.Build.0 = Release|Win32
+		{0C8C64A1-200D-4E0B-B611-AF1AC17C647F}.Debug.ActiveCfg = Debug|Win32
+		{0C8C64A1-200D-4E0B-B611-AF1AC17C647F}.Debug.Build.0 = Debug|Win32
+		{0C8C64A1-200D-4E0B-B611-AF1AC17C647F}.Release.ActiveCfg = Release|Win32
+		{0C8C64A1-200D-4E0B-B611-AF1AC17C647F}.Release.Build.0 = Release|Win32
+		{0C8C64A1-200D-4E0B-B611-AF1AC17C647F}.XYTEST.ActiveCfg = Release|Win32
+		{0C8C64A1-200D-4E0B-B611-AF1AC17C647F}.XYTEST.Build.0 = Release|Win32
+		{4D400E0B-1204-48EF-96DB-A0BDD62F2C8B}.Debug.ActiveCfg = Debug|Win32
+		{4D400E0B-1204-48EF-96DB-A0BDD62F2C8B}.Debug.Build.0 = Debug|Win32
+		{4D400E0B-1204-48EF-96DB-A0BDD62F2C8B}.Release.ActiveCfg = Release|Win32
+		{4D400E0B-1204-48EF-96DB-A0BDD62F2C8B}.Release.Build.0 = Release|Win32
+		{4D400E0B-1204-48EF-96DB-A0BDD62F2C8B}.XYTEST.ActiveCfg = Release|Win32
+		{4D400E0B-1204-48EF-96DB-A0BDD62F2C8B}.XYTEST.Build.0 = Release|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FA}.Debug.ActiveCfg = Debug|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FA}.Debug.Build.0 = Debug|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FA}.Release.ActiveCfg = Release|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FA}.Release.Build.0 = Release|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FA}.XYTEST.ActiveCfg = Release|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FA}.XYTEST.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
