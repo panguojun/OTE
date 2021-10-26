@@ -1,0 +1,282 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MeterialEditor DIALOGEX 0, 0, 136, 313
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "材质编辑器"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "打开",IDC_Open,1,0,17,16,BS_BITMAP
+    PUSHBUTTON      "关闭",IDC_Close,19,0,17,16,BS_BITMAP
+    PUSHBUTTON      "保存",IDC_Save,37,0,17,16,BS_BITMAP
+    CONTROL         "",IDC_TAB1,"SysTabControl32",0x0,1,105,133,201
+    LTEXT           "材质列表:",IDC_STATIC,0,24,36,8
+    CONTROL         "",IDC_MaterialList,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,0,
+                    33,134,52
+    EDITTEXT        IDC_MaterialName,49,89,85,14,ES_AUTOHSCROLL
+    LTEXT           "材质名称:",IDC_STATIC,0,92,36,8
+END
+
+IDD_Light DIALOGEX 0, 0, 120, 201
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    LTEXT           "光照信息:",IDC_STATIC,0,0,37,8
+    CONTROL         "",IDC_ColorList,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,0,
+                    11,119,73
+    LTEXT           "亮度调节:",IDC_STATIC,0,88,37,8
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_TOP | WS_TABSTOP,
+                    0,100,119,24
+END
+
+IDD_Texture DIALOGEX 0, 0, 120, 204
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "使用静态纹理",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,1,21,64,10
+    CONTROL         "使用动态纹理",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,0,
+                    77,64,10
+    EDITTEXT        IDC_EDIT1,1,33,98,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON1,102,32,17,14
+    LTEXT           "文件列表：",IDC_STATIC,1,107,41,8
+    PUSHBUTTON      "添加文件",IDC_BUTTON2,0,187,57,14
+    PUSHBUTTON      "删除文件",IDC_BUTTON3,60,187,59,14
+    LTEXT           "动画时长：",IDC_STATIC,1,91,41,8
+    EDITTEXT        IDC_EDIT2,42,89,48,14,ES_AUTOHSCROLL
+    LTEXT           "秒",IDC_STATIC,91,93,9,8
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,1,117,101,68
+    PUSHBUTTON      "∧",IDC_BUTTON4,105,117,9,32
+    PUSHBUTTON      "∨",IDC_BUTTON5,105,153,9,32
+    LTEXT           "贴图方式",IDC_STATIC,3,5,37,11
+    COMBOBOX        IDC_COMBO1,45,4,66,61,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "双面贴图",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,67,20,45,14
+    LISTBOX         IDC_TexUnitList,1,47,97,28,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDC_BUTTON6,102,48,17,13
+END
+
+IDD_Alpha DIALOGEX 0, 0, 120, 201
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "Alpha测试",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,127,52,10
+    CONTROL         "深度测试",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,71,3,48,10
+    LTEXT           "Alpha参考值：",IDC_STATIC,4,145,53,8
+    EDITTEXT        IDC_EDIT1,54,141,40,14,ES_AUTOHSCROLL
+    LTEXT           "Alpha比较函数：",IDC_STATIC,4,161,61,8
+    COMBOBOX        IDC_COMBO2,2,174,117,69,CBS_DROPDOWN | CBS_SORT | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "场景混合模式：",IDC_STATIC,3,39,57,8
+    COMBOBOX        IDC_COMBO3,2,51,117,64,CBS_DROPDOWNLIST | CBS_SORT | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "深度比较函数：",IDC_STATIC,2,3,57,8
+    COMBOBOX        IDC_COMBO4,2,17,117,84,CBS_DROPDOWNLIST | CBS_SORT | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO1,2,86,117,65,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "高倍亮度：",IDC_STATIC,2,75,41,8
+END
+
+IDD_Other DIALOGEX 0, 0, 120, 201
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_STATIC,0,1,119,33
+    CONTROL         "模型剪裁",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,2,48,10
+    CONTROL         "顺时针",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,5,17,40,10
+    CONTROL         "逆时针",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,66,17,40,
+                    10
+    PUSHBUTTON      "ShaderFX",IDC_BUTTON1,3,53,116,18
+END
+
+IDD_SHADERFXEDITOR DIALOGEX 0, 0, 405, 254
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "ShaderFX Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1,0,174,403,61,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_BUTTON2,146,5,19,16
+    PUSHBUTTON      "...",IDC_BUTTON3,353,6,20,15
+    EDITTEXT        IDC_EDIT1,43,6,98,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,249,6,98,15,ES_AUTOHSCROLL
+    LTEXT           "HLSL VS:",IDC_STATIC,7,9,32,12
+    LTEXT           "HLSL PS:",IDC_STATIC,211,8,32,12
+    PUSHBUTTON      "确定",IDC_BUTTON4,201,237,202,16
+    PUSHBUTTON      "取消",IDC_BUTTON5,1,237,200,16
+END
+
+IDD_MATBROWSER DIALOGEX 0, 0, 301, 281
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "材质库"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "材质库",IDC_STATIC,2,1,298,233
+    PUSHBUTTON      "<<上一页",IDC_BUTTON1,213,237,40,16
+    PUSHBUTTON      "下一页>>",IDC_BUTTON7,258,236,40,16
+    PUSHBUTTON      "新建",IDC_BUTTON2,257,260,41,16
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MeterialEditor, DIALOG
+    BEGIN
+        RIGHTMARGIN, 134
+        BOTTOMMARGIN, 306
+    END
+
+    IDD_Light, DIALOG
+    BEGIN
+        RIGHTMARGIN, 119
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_Texture, DIALOG
+    BEGIN
+        RIGHTMARGIN, 119
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_Alpha, DIALOG
+    BEGIN
+        RIGHTMARGIN, 119
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_Other, DIALOG
+    BEGIN
+        RIGHTMARGIN, 119
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_SHADERFXEDITOR, DIALOG
+    BEGIN
+        RIGHTMARGIN, 403
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "bitmap3.bmp"
+IDB_BITMAP2             BITMAP                  "bitmap1.bmp"
+IDB_BITMAP3             BITMAP                  "bitmap2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_Texture DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 9, 0
+0x4154, 0x5f4d, 0x5257, 0x5041, "\000" 
+    IDC_COMBO1, 0x403, 11, 0
+0x4154, 0x5f4d, 0x494d, 0x5252, 0x524f, "\000" 
+    IDC_COMBO1, 0x403, 10, 0
+0x4154, 0x5f4d, 0x4c43, 0x4d41, 0x0050, 
+    0
+END
+
+IDD_Alpha DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 9, 0
+0xbbd2, 0xb6b1, 0xc1c1, 0xc8b6, "\000" 
+    IDC_COMBO1, 0x403, 9, 0
+0xfeb6, 0xb6b1, 0xc1c1, 0xc8b6, "\000" 
+    IDC_COMBO1, 0x403, 9, 0
+0xc4cb, 0xb6b1, 0xc1c1, 0xc8b6, "\000" 
+    0
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

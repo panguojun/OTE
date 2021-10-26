@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_MaterialEditor", "Plugin_MaterialEditor.vcproj", "{EF1D498E-9FF0-4104-AEB2-8949329CF1FB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FB}.Debug.ActiveCfg = Debug|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FB}.Debug.Build.0 = Debug|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FB}.Release.ActiveCfg = Release|Win32
+		{EF1D498E-9FF0-4104-AEB2-8949329CF1FB}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
